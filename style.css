@@ -3,6 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+#text-container {
+    width: 20%;
+    height: 100px;
+    margin: 30vh auto 0;
+    padding: 20px;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    font-size: 24px;
+
+}
+
+#number-container, #number-correct {
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    font-size: 50px;
+
+    text-align: center;
+    background-color: aquamarine;
+    color: blueviolet;
+}
 
 
 
