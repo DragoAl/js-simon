@@ -17,7 +17,7 @@ for( let i= 1; i <= 5; i++) {
     textCont.innerHTML="MEMORIZZA QUESTI NUMERI, HAI 30 SECONDI";
     randNumCont.innerHTML +=` ${randNum},  `;
 }
-// setTimeout(insertNumber, 30000); 
+setTimeout(insertNumber, 30000); 
 
 // funzioni
 function randNumGenerator (min, max) {
