@@ -3,7 +3,11 @@
 // Dopo 30 secondi l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 const randNumCont = document.getElementById("number-container");
+const correctNumCont = document.getElementById("number-correct");
+
 const randNumArr = [];
+const correctNum = [];
+
 let numeroInserito;
 // GENERO CASUALMENTE 5 NUMERI
 for( let i= 1; i <= 5; i++) {
@@ -13,18 +17,7 @@ for( let i= 1; i <= 5; i++) {
 
     randNumCont.innerHTML +=`${randNum},  `;
 }
-setTimeout(insertNumber, 30000); 
-
-
-
-
-
-
-
-
-
-
-
+setTimeout(insertNumber, 5000); 
 
 // funzioni
 function randNumGenerator (min, max) {
@@ -35,9 +28,19 @@ function insertNumber () {
     randNumCont.classList.add("hidden");
 
     for (let i = 1; i <= 5; i++) {
-        let numeroInserito =prompt("inserisci un numero visto");
+        let numeroInserito =parseInt(prompt("inserisci un numero visto"));
         console.log("numero inserito",numeroInserito);
+        if (randNumArr.includes(numeroInserito)) {
+            correctNum.push(numeroInserito);
+            console.log(correctNum);
+            console.log("yeah");
+            correctNumCont.innerHTML = `I NUMERI CORRETTI SONO: ${correctNum}, `;
 
+        } else {
+            console.log("oh no")
+        }
     }
-    return numeroInserito;
+
+    
 }
+// return randNumCont.innerHTML = correctNum;
