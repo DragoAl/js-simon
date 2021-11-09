@@ -13,6 +13,8 @@ for( let i= 1; i <= 5; i++) {
 
     randNumCont.innerHTML +=`${randNum},  `;
 }
+setTimeout(insertNumber, 30000); 
+
 
 
 
@@ -29,3 +31,13 @@ function randNumGenerator (min, max) {
     return Math.floor(Math.random() * (max - min) + min);    
 }
 
+function insertNumber () {
+    randNumCont.classList.add("hidden");
+
+    for (let i = 1; i <= 5; i++) {
+        let numeroInserito =prompt("inserisci un numero visto");
+        console.log("numero inserito",numeroInserito);
+
+    }
+    return numeroInserito;
+}
