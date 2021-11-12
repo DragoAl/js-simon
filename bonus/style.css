@@ -55,7 +55,7 @@ input {
     font-size: 35px;
 }
 
-#submit {
+.btn {
     display: block;
     width: 100px;
     background-color:darkcyan;
@@ -67,6 +67,10 @@ input {
     font-family: 'Fredoka One', cursive;
     font-family: 'Shadows Into Light', cursive;
 
+}
+
+#try-again {
+    font-size: 20px;
 }
 
 

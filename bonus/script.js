@@ -6,6 +6,8 @@ const randNumCont = document.getElementById("number-container");
 const textCont = document.getElementById("text-container");
 const formInput = document.getElementById("form-input")
 const submit = document.getElementById("submit");
+const tryAgain = document.getElementById("try-again");
+
 
 const randNumArr = [];
 let correctNum = [];
@@ -20,7 +22,7 @@ while (randNumArr.length < 5) {
     textCont.innerHTML="MEMORIZZA QUESTI NUMERI, HAI 30 SECONDI";
     randNumCont.innerHTML =` ${randNumArr}  `;
 }
-setTimeout(insertNumber, 30000); 
+setTimeout(insertNumber, 20000); 
 
 
 // funzioni
@@ -34,8 +36,9 @@ function insertNumber () {
     textCont.innerHTML="INSERISCI I NUMERI VISTI";
 
     submit.addEventListener("click", () => {
+        let correctNum = [];
+        let inputNum = document.getElementsByClassName('input-text');
 
-        let inputNum = document.getElementsByName('array[]');
         for (let i = 0; i < inputNum.length; i++) {
             let a = parseInt(inputNum[i].value);
            
@@ -60,10 +63,15 @@ function insertNumber () {
             textCont.innerHTML = "OH NO NON NE HAI INDOVINATO NESSUNO" ;
 
         }
-        
+
     }
     
     );
+    tryAgain.addEventListener( "click",() => {
+        window.location.reload();
+    }
+    );
+    
 
 }
 
